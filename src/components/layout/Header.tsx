@@ -8,6 +8,7 @@ import {
 } from '@mui/material';
 import type { MenuType } from './types';
 import { Logout as LogoutIcon } from '@mui/icons-material';
+import { useLocation } from 'react-router-dom';
 
 interface Props {
   username?: string;
@@ -16,13 +17,14 @@ interface Props {
 }
 
 export const Header = ({ username, menuOptions, logout }: Props) => {
-const getPageTitle = () => {
-  const hash = location.hash.replace('#/', '/');
-  const currentOption = menuOptions.find(
-    (option) => hash.startsWith(option.path),
-  );
-  return currentOption?.text || 'TaskDone';
-};
+  const location = useLocation();
+
+  const getPageTitle = () => {
+    const currentOption = menuOptions.find(
+      (option) => location.pathname === option.path,
+    );
+    return currentOption?.text || 'TaskDone';
+  };
 
   return (
     <AppBar position="fixed" elevation={2}>
