@@ -16,12 +16,13 @@ interface Props {
 }
 
 export const Header = ({ username, menuOptions, logout }: Props) => {
-  const getPageTitle = () => {
-    const currentOption = menuOptions.find(
-      (option) => option.path === location.pathname,
-    );
-    return currentOption?.text || 'Mi App';
-  };
+const getPageTitle = () => {
+  const hash = location.hash.replace('#/', '/');
+  const currentOption = menuOptions.find(
+    (option) => hash.startsWith(option.path),
+  );
+  return currentOption?.text || 'TaskDone';
+};
 
   return (
     <AppBar position="fixed" elevation={2}>
