@@ -1,73 +1,65 @@
-# React + TypeScript + Vite
+# 📝 TaskDone - Gestión de Tareas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web desarrollada con **React + TypeScript** para la gestión de tareas personales.
 
-Currently, two official plugins are available:
+## 🌐 Demo en vivo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+👉 https://vladimir456.github.io/diplomado-react-proyecto/
 
-## React Compiler
+## 🚀 Tecnologías utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 18 + TypeScript
+- Material UI (MUI)
+- React Router v6
+- Axios
+- Vite
+- GitHub Pages
 
-## Expanding the ESLint configuration
+## ✅ Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Registro e inicio de sesión con JWT
+- Protección de rutas privadas
+- Visualización de tareas en tiempo real
+- Crear nueva tarea
+- Editar tarea existente
+- Eliminar tarea
+- Cambiar estado entre Pendiente y Finalizada
+- Ver detalle de tarea
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ⚙️ Instalación y ejecución local
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1. Clona el repositorio:
+   git clone https://github.com/Vladimir456/diplomado-react-proyecto.git
+   cd diplomado-react-proyecto
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2. Instala las dependencias:
+   npm install
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3. Crea el archivo de variables de entorno:
+   Crea un archivo .env en la raíz con:
+   VITE_API_URL=https://taskdone-node.onrender.com/api
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+4. Ejecuta el proyecto:
+   npm run dev
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+5. Abre en el navegador:
+   http://localhost:5173
+
+## 👤 Crear usuario
+
+1. Haz clic en "Registrar nuevo usuario"
+2. Ingresa tu username y contraseña (mínimo 6 caracteres)
+3. Serás redirigido automáticamente
+
+## 🔗 Enlaces
+
+- 🌐 App en vivo: https://vladimir456.github.io/diplomado-react-proyecto/
+- 📦 Repositorio: https://github.com/Vladimir456/diplomado-react-proyecto
+- 🔌 Backend: https://taskdone-node.onrender.com
+- 📚 API Docs: https://taskdone-node.onrender.com/api-docs
+
+## 🎓 Proyecto académico
+
+Diplomado Fullstack Developer Backend y Frontend
+Módulo VII - Desarrollo Frontend con React
+Universidad Simón I. Patiño
